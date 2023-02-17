@@ -40,7 +40,7 @@
         </ul>
         <div class="nav-callback">
             <div class="nav-callback__phone-number-wrapper">
-                <div class="nav-callback__phone-number"><a href="tel:+79030244523">+7 (903) 024-45-23</a></div>
+                <div class="nav-callback__phone-number"><a href="tel:+79189994510">+7 (918) 999-45-10</a></div>
                 <div class="nav-callback__phone-number-caption">Позвони сейчас!</div>
             </div>
             <button class="nav-callback__button button" onclick="Livewire.emit('openModal', 'phone-main-modal')">Заказать звонок</button>
@@ -68,7 +68,7 @@
             <div class="main-section__text">Скачайте презентацию с подробным разбором прибыльного бизнеса в вашем
                 городе</div>
             <div class="main-section__buttons-wrapper">
-                <button class="main-section__presentation-button" onclick="Livewire.emit('openModal', 'phone-main-modal')">Получить презентацию</button>
+                <a class="main-section__presentation-button" href="././file_presentation/presentation.pdf" download>Получить презентацию</a>
                 <button class="main-section__callback-button button" onclick="Livewire.emit('openModal', 'phone-main-modal')">Заказать звонок</button>
             </div>
             <div class="main-section__mobile-image"><img src="./assets/main-section-image.png" alt=""></div>
@@ -675,6 +675,12 @@
         </div>
     </div>
 </section>
+
+<script>
+    function stFile(){
+
+    }
+</script>
 
 <script src="./script.js"></script>
 @livewire('livewire-ui-modal')

@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 if (empty($model) && empty($params)) $html = \Livewire\Livewire::mount($live, [])->html();
 else if (empty($model)) $html = \Livewire\Livewire::mount($live, $params)->html();
 else $html = \Livewire\Livewire::mount($live, [
-        'model' => $model,
-        'return_url' => @$route ? '/'.Route::getRoutes()->getByName($route)->uri : ''
-    ])->html();
+    'model' => $model,
+    'return_url' => @$route ? '/'.Route::getRoutes()->getByName($route)->uri : ''
+])->html();
+
 //$html = \Livewire\Livewire::mount('user-detail-view', ['model' => 1])->html();
 //$liveware = '<livewire:cabinet-table-view />';
 ?>

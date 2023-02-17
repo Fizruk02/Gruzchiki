@@ -68,6 +68,7 @@ class OrdersTableView extends ListView
 
     public function data(Orders $order)
     {
+        //dump($order);
         $num = ($this->page -  1) * $this->paginate + $this->num++;
         return [
             'number' => $num,
