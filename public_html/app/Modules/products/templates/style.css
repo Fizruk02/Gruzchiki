@@ -1,0 +1,298 @@
+.market_item {
+    display: grid;
+    grid-template-areas: "mi_left_col mi_right_col"
+                         "mi_items_filter_category mi_items_filter_category"
+    ;
+    grid-template-columns: 300px 1fr;
+    gap: 10px;
+    max-width:1200px;
+    margin: auto;
+    padding: 1rem;
+    color:#222;
+}
+
+@media screen and (max-width: 980px) {
+    .market_item {
+        grid-template-columns: 1fr;
+        grid-template-areas: "mi_left_col" "mi_right_col" "mi_items_filter_category";
+    }
+    
+    
+    .mi_items_filter_category .mi_items {
+        scrollbar-width: none;
+        overflow-x: auto;
+        -ms-scroll-snap-type: mandatory;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .mi_items_filter_category .mi_title {
+        font-size: 1.13em!important;
+        margin-bottom:1rem;
+    }
+}
+/***********************************************/
+.mi_items_filter_category .mi_items {
+/*     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    gap: 1rem; */
+    display: flex;
+    gap: 1rem;
+    padding-left: 0!important;
+    max-width: 100vw;
+}
+
+.mi_items_filter_category .mi_items .item {
+    display: grid;
+
+    grid-template-areas:
+        "goods_img goods_img"
+        "goods_name goods_name"
+        "goods_price goods_btns"
+        ;
+    
+/*     grid-template-areas:
+    "goods_price goods_img"
+    "goods_name goods_img"
+        "goods_btns goods_btns"
+        ; */
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+    background-color: #ffff;
+    padding: 18px;
+    border-radius: 24px;
+    position: relative;
+    min-height: 53px;
+    min-width: 180px;
+	text-decoration: none;
+	transition: all 200ms;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+.mi_items_filter_category .mi_items .item .name {
+	grid-area: goods_name;
+    color: #000000!important;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 2rem;
+}
+.mi_items_filter_category .mi_items .item .price {
+	grid-area: goods_price;
+	color: #000000;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    font-size: clamp(12px,4vw,18px);
+}
+.mi_items_filter_category .mi_items .item .img {
+	grid-area: goods_img;
+}
+.mi_items_filter_category .mi_items .item .btns {
+	grid-area: goods_btns;
+}
+.mi_items_filter_category .mi_items .item .img {
+    grid-area: goods_img;
+    height: 140px;
+    background-repeat: no-repeat !IMPORTANT;
+    background-size: cover !IMPORTANT;
+    /* background-size: contain !IMPORTANT; */
+    background-position: center !IMPORTANT;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+	
+	
+.mi_items_filter_category .mi_items .item .cell {
+    color: #081fc0 !IMPORTANT;
+}
+
+/***********************************************/
+
+
+
+.mi_items_filter_category {
+    grid-area: mi_items_filter_category;
+    width: 100%;
+    margin-top: 4rem;
+    overflow: hidden;
+}
+
+.mi_items_filter_category .mi_title {
+    font-size: 2.25em;
+    font-weight: 700;
+}
+
+.market_item .mi_left_col {
+    grid-area: mi_left_col;
+}
+
+.market_item .img-fluid {
+    max-width: 100%;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    cursor: zoom-in;
+}
+.market_item .mi_right_col {
+    background: #fff;
+    border-radius: 24px;
+    grid-area: mi_right_col;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    padding: 1.6rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    /* grid-template-rows: 30px 1fr 60px; */
+}
+
+.market_item .mi_right_col .item_title {
+    font-size: 2.250em;
+    font-weight: 700;
+}
+
+.market_item .mi_right_col .item_description {
+    text-align: justify;
+}
+
+.market_item .dotted_imgs img{
+    width:100%;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+.market_item .dotted_imgs .aimg{
+    background-size: cover!important;
+    background-position: center!important;
+    border: 1px solid white;
+    border-radius: 6px;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    position: relative;
+    transition: transform 200ms;
+}
+
+.dotted_imgs .aimg:hover {
+    transform: scale(1.1);
+}
+
+.market_item .dotted_imgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50px);
+    gap: 6px;
+}
+
+.bottom_col {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+}
+
+.btn_to_cart {
+    padding: 6px 20px 6px 20px;
+    border-radius: 6px;
+    border: 0;
+    transition: background-color 100ms;
+}
+
+.btn_to_cart.add, .to_cart_plusminus_area {
+    display:none;
+}
+
+.btn_to_cart:hover {
+    background: #b1c9de;
+}
+
+.to_cart_area {
+    display: grid;
+    gap: 2px
+}
+
+
+
+.to_cart_plusminus_area {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    gap: 4px
+}
+
+.market_item .mi_sum {
+    display: flex;
+    gap: 3px;
+    font-size: 1.7rem;
+    transition: color 100ms;
+    cursor:pointer;
+    width: fit-content;
+}
+
+.price_data {
+
+}
+
+.label_to_cart {
+    white-space: nowrap;
+
+}
+
+.market_item .mi_sum:hover {
+    color: blue;
+}
+
+
+.hover-image * {
+  box-sizing: border-box;
+}
+.hover-image {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    background: #0000;
+    line-height: 0;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+.hover-image img {
+  transition: all 0.5s ease 0s;
+      background: white;
+}
+.hover-image:hover > img {
+  transform: scale(1.6, 1.6) rotate(-20deg);
+  opacity: 0.5;
+}
+.hover-image a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.5s ease 0s;
+  border: 4px solid #bfe2ff;
+  background: #337ab7;
+  opacity: 0.8;
+  transform: scale(0);
+  padding: 20px;
+}
+.hover-image a img {
+  width: 48px;
+}
+.hover-image a i {
+  font-size: 48px;
+  color: #fff;
+}
+.hover-image a:hover {
+  opacity: 1;
+}
+.hover-image:hover a {
+  transform: scale(1);
+}
+
+
+
+

@@ -1,0 +1,32 @@
+.address_group, .detailed-address {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detailed-address {
+    gap: .3rem;
+}
+
+.fields_empty .fields_val {
+    border-color: #dc3545;
+    outline: 2px solid #dc3545;
+    outline-offset: -3px;
+    padding-right:26px;
+    background-image: url(/templates/sections/project_admin_new_house/files/empty.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.375em center;
+    background-size: 16px;
+}
+
+.detailed-address .address-item {
+    background: #cbcbcb;
+    border-radius: 6px;
+    padding: 5px 17px;
+}
+
+.detailed-house {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 0.3em;
+}

@@ -1,0 +1,16 @@
+._cartbtn {
+    background: #fff;
+    border: 1px solid gray;
+    padding: 4px 10px;
+    border-radius: 6px;
+    width: fit-content;
+    text-decoration: none;
+    color: #fff;
+    cursor:pointer;
+    display:none;
+    transition: all 300ms;
+}
+._cartbtn:hover {
+    background: #f1f1f1;
+    color: #fff;
+}

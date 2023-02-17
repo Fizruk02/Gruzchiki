@@ -1,0 +1,1 @@
+[{"command":"scripts_cron.php","minutes":"*","hours":"*","days":"*","months":"*","weekdays":"*"},{"command":"mailing.php","minutes":"*","hours":"*","days":"*","months":"*","weekdays":"*"}]

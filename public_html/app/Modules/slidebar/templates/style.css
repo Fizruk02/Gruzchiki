@@ -1,0 +1,22 @@
+.slidebar {
+    /* height: 100vh; */
+}
+main {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.submain-container {
+    width:100%;
+    overflow: auto;
+}
+
+.slidebar .company-logo {
+    height: 36px;
+}
+
+.slidebar .header-info {
+    gap: .2em;
+}

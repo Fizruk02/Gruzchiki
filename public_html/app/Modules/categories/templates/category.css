@@ -1,0 +1,205 @@
+.center {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* .cat-preview img {
+    width: -webkit-fill-available;
+    border-radius: 26px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+} */
+.cat-preview {
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    height: 250px;
+    background-position: center !IMPORTANT;
+    background-size: cover !IMPORTANT;
+    background-repeat: no-repeat !IMPORTANT;
+    margin-bottom: 0.3rem;
+}
+
+
+
+.cat-name {
+	font-size: 1.5rem;
+}
+
+.cat-parents {
+    font-size: .8rem;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 3px;
+}
+.cat-parents span {
+    background: white;
+    padding: 1px 3px;
+    border-radius: 9px;
+    white-space: nowrap;
+    display: block;
+    cursor: pointer;
+    transition: all 200ms;
+    text-decoration: none;
+    color: #464646;
+}
+
+.cat-parents span:hover {
+    background-color: #89898936;
+}
+
+.field-goods {
+	display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+	
+
+.field-goods .item {
+    display: grid;
+
+    grid-template-areas:
+        "goods_img goods_img"
+        "goods_name goods_name"
+        "goods_price goods_btns"
+        ;
+    
+/*     grid-template-areas:
+    "goods_price goods_img"
+    "goods_name goods_img"
+        "goods_btns goods_btns"
+        ; */
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+    background-color: #ffff;
+    padding: 18px;
+    border-radius: 24px;
+    position: relative;
+    min-height: 53px;
+	text-decoration: none;
+	transition: all 200ms;
+    height: fit-content;
+}
+.field-goods .item:hover {
+/*     background-color: #0000001c; */
+   /*  outline: 2px solid #9ba8b7; */
+    /* box-shadow: inset 0px 0px 11px 2px #9ba8b7; */
+}
+.field-goods .item .name {
+	grid-area: goods_name;
+    color: #000000!important;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 2rem;
+}
+.field-goods .item .price {
+	grid-area: goods_price;
+	color: #000000;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    font-size: clamp(12px,4vw,18px);
+}
+.field-goods .item .img {
+	grid-area: goods_img;
+}
+.field-goods .item .btns {
+	grid-area: goods_btns;
+}
+.field-goods .item .img {
+    grid-area: goods_img;
+    height: 140px;
+    background-repeat: no-repeat !IMPORTANT;
+    background-size: cover !IMPORTANT;
+    /* background-size: contain !IMPORTANT; */
+    background-position: center !IMPORTANT;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+	
+	
+.field-goods .item .cell {
+    color: #081fc0 !IMPORTANT;
+}
+.cat-container {
+    display: grid;
+    grid-template-areas: "field-goods field-category";
+    grid-template-columns: 1fr 350px;
+    gap: 1rem;
+    align-items: start;
+	max-width:1200px;
+	margin: auto;
+}
+.field-category {
+	grid-area: field-category;
+}
+.field-goods {
+	grid-area: field-goods;
+}
+
+.btns {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+}
+	
+.btn_to_cart {
+	font-size: 18pt;
+	border-radius: 4px;
+	border: 0;
+	background-color: #F1F0ED;
+	transition: background-color 400ms;
+}
+.btn_to_cart:hover {
+	background-color: #e1e0de;
+}
+
+.btn-cart {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index:9999;
+	text-decoration: none;
+	font-size: 18pt;
+	border-radius: 4px;
+	border: 0;
+	background-color: #01956d;
+	transition: background-color 400ms;
+	padding: 0 20px;
+	color: white;
+	display: none;
+}
+.btn-cart:hover {
+	background-color: #07b083;
+	color: white;
+}
+
+
+@media screen and (max-width: 767.9px){
+	.cat-container {
+		grid-template-areas: "field-category" "field-goods";
+		grid-template-columns: 1fr;
+	}
+	.cat-container img {
+        display: none;
+	}
+    .cat-preview {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 1023.9px){
+    .field-goods {
+        grid-template-columns: repeat(2,1fr);
+    	gap: 8px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .field-goods {
+        grid-template-columns: 1fr;
+    	gap: 6px;
+    }
+}

@@ -1,0 +1,14 @@
+.navbar-brand img{
+    height: inherit;
+}
+.navbar {
+    background: #212529;
+}
+
+.navbar a {
+    color: white!important;
+}
+
+.navbar .container-fluid {
+    /* max-width: 1200px; */
+}

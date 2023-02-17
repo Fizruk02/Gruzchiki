@@ -1,0 +1,212 @@
+
+.cart_container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 801px){
+    .cart_container {
+        grid-template-areas: "field_cart_items"
+                             "field_cart_delivery"
+                             "field_cart_fields"!IMPORTANT;
+        grid-template-columns: 1fr!IMPORTANT;
+    }
+    .cart_send_btn_area {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 56px;
+		z-index: 1000;
+		box-shadow: 0px -4px 20px rgb(117 115 111 / 20%);
+		left: 0;
+    }
+}
+
+.field_cart_items, .field_cart_delivery, .field_cart_fields {
+    background: white;
+    padding: 1.3rem 2rem 2rem 2rem;
+    border-radius: 24px;
+}
+
+.cart_delivery_title, .cart_items_title, .cart_fields_title {
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: -0.01em;
+    font-weight: bold;
+}
+
+.field_cart_items {
+    grid-area: field_cart_items;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+}
+
+.field_cart_delivery {
+    grid-area: field_cart_delivery;
+    display: grid;
+    gap: 1rem;
+}
+
+.field_cart_fields {
+    grid-area: field_cart_fields;
+    display: grid;
+    gap: 1rem;
+}
+
+.field_cart_fields .field_cart_fields_area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:10px;
+/*     margin-bottom: 2rem; */
+}
+
+.field_cart_delivery input {
+    border-radius: 16px;
+}
+
+.address_group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.address_details {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+}
+
+
+.field_cart_fields input.fields_val {
+    width: -webkit-fill-available;
+    border-radius: 16px;
+    border: 1px solid #ced4da;
+    padding: 0 16px;
+    outline: none;
+    font-weight: 600;
+    height: 52px;
+    font-size: 16px;
+
+}
+.field_cart_fields .fields_empty .fields_val {
+    border-color: #dc3545;
+    outline: 2px solid #dc3545;
+    outline-offset: -3px;
+    padding-right:26px;
+    background-image: url(/templates/sections/cart/files/empty.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.375em center;
+    background-size: 16px;
+}
+
+
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 10px;
+    line-height: 1.3;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+.cart-item .img {
+    border-radius: 5px;
+    font-size: 26pt;
+    color: white;
+    text-align: center;
+    width:45px !IMPORTANT;
+    height:45px !IMPORTANT;
+    background-size:cover !IMPORTANT;
+}
+.cart-item .plus,
+.cart-item .minus {
+    border: 1px solid;
+    border-radius: 50px;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-self: flex-end;
+}
+
+.cart-item-title{
+    display: grid;
+    align-items: center;
+}
+.cart-item-title div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cart-item .plus {
+    background: #F8A917;
+    font-size: 25px;
+}
+
+.cart-item .minus {
+    background: #E64D44;
+    font-size: 30px;
+}
+
+.cart_plus_block {
+    background: #fff;
+    height: 10px;
+    width: 2px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+.cart_plus_block:after {
+    content: "";
+    height: 2px;
+    width: 10px;
+    background: #fff;
+    position: absolute;
+    left: -4px;
+    top: 4px;
+}
+.cart_minus_block {
+    content: "";
+    height: 2px;
+    width: 10px;
+    background: #fff;
+    left: -4px;
+    top: 4px;
+    display: block;
+    margin: 4px auto;
+}
+.cart_items :last-child {
+    border-bottom-width: 0;
+}
+
+.cart_send_btn {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.cart_send_btn_area {
+    text-align: center;
+}

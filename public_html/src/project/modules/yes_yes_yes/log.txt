@@ -1,0 +1,50 @@
+Array
+(
+    [0] => Array
+        (
+            [message_id] => 983
+            [channel_id] => 339635074
+            [channel_name] => wmstr2007
+            [type] => 1
+        )
+
+)
+Array
+(
+    [0] => Array
+        (
+            [message_id] => 984
+            [channel_id] => 339635074
+            [channel_name] => wmstr2007
+            [type] => 1
+        )
+
+)
+Array
+(
+)
+Array
+(
+    [0] => Array
+        (
+            [message_id] => 465
+            [channel_id] => 2028229982
+            [channel_name] => Blackagaric
+            [type] => 1
+        )
+
+)
+Array
+(
+    [0] => Array
+        (
+            [message_id] => 466
+            [channel_id] => 2040864857
+            [channel_name] => penzadeveloper
+            [type] => 1
+        )
+
+)
+Array
+(
+)

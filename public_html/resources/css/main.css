@@ -1,0 +1,53 @@
+/* structure grid-a1fra layout default */
+.layoutwrapper {
+display: grid;
+grid-template-rows: auto 1fr auto;
+min-height: 100vh;
+}
+
+
+._cartbtn {
+    background: #009144;
+    border: 1px solid #009144;
+}
+._cartbtn:hover {
+    background: #02803d;
+    border-color: #02803d;
+}
+
+
+.container .slider {
+    margin-bottom: 2rem;
+}
+
+.field-categories {
+    margin-bottom: 3rem;
+}
+
+.navbar .container-fluid {
+    /*max-width: 1200px;*/
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0;
+}
+
+body {
+    background: #f5f4f2;
+}
+
+.navbar {
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.field-categories .item .name {
+    /* border-color: white; */
+    border: 0!important;
+}
+
+.navbar-brand {
+    padding-top: 0!important;
+    font-size: 0!important;
+}
